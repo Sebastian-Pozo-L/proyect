@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login to INTERPOLcase</title>
+
+		<link rel="stylesheet" th:href="@{/css/login.css}" />
+	</head>
+	<body>
+		<a class="logontpl" th:href="@{/INTERPOLcase}"><img src="/images/INTERPOL-Logo.png" alt="" /></a>
+		<div class="cnt-login">
+			<span id="log">Login to Interpol Case</span>
+			<form th:action="@{/login}" method="post">
+				<!-- error message -->
+				<div th:if="${param.error}">
+					<div class="alert-danger">Invalid username or password.</div>
+				</div>
+				<div class="form-login">
+					<label for="username">Username:</label>
+					<div class="box-cnt">
+						<input
+							type="text"
+							class="box-form"
+							id="username"
+							name="username"
+							placeholder="Enter Email ID"
+							autofocus="autofocus"
+							style="padding-left: 6px"
+						/>
+					</div>
+				</div>
+				<div class="form-login">
+					<label for="password">Password:</label>
+					<div class="box-cnt">
+						<input
+							type="password"
+							class="box-form"
+							id="password"
+							placeholder="Enter Password"
+							name="password"
+							autofocus="autofocus"
+							style="padding-left: 6px"
+						/>
+					</div>
+				</div>
+				<button type="submit" class="btn-success">Log In</button>
+				<span class="txt-login">New user?&nbsp;<a href="/" th:href="@{/registration}">Register here</a></span>
+			</form>
+		</div>
+	</body>
+</html>

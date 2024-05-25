@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+	<head th:fragment="head">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>INTERPOLcase</title>
+
+		<link rel="stylesheet" th:href="@{/css/INTERPOLcase.css}" />
+	</head>
+	<body>
+		<header th:fragment="nav-head">
+			<nav>
+				<div class="opc-nav">
+					<a class="cnt-out-logo" href="#"
+						><img class="logo-interpol" src="/images/INTERPOL-Logo.png" alt="Logo"
+					/></a>
+					<ul class="nav-links">
+						<li><a class="txt-opc" th:href="@{#}">HOME</a></li>
+						<li><a class="txt-opc" th:href="@{#}">ABOUT US</a></li>
+						<li>
+							<a class="user-opc" th:href="@{#}"><img class="sr-img" src="/images/user.png" alt="User" /></a>
+							<ul class="drop-menu">
+								<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+								<li><a th:href="@{/portal}">Portal</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<footer></footer>
+	</body>
+</html>

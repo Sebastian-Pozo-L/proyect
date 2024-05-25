@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+	<head th:fragment="head">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Registrarte en FBIcase | FBIcase</title>
+
+		<link rel="stylesheet" th:href="@{/css/register.css}" />
+	</head>
+	<body th:fragment="register">
+		<p class="logofbi"><img src="/images/FBI-LOGO.png" alt="" /></p>
+		<form th:action="@{/registration}" method="post" th:object="${user}">
+			<div class="form-register">
+				<div class="cnt-rgt">
+					<div class="cnt-name">
+						<label for="firstname">First Name:</label>
+						<div>
+							<input
+								id="firstname"
+								placeholder="First Name"
+								th:field="*{firstname}"
+								required
+								autofocus="autofocus"
+								style="padding-left: 6px"
+							/>
+						</div>
+					</div>
+					<div class="cnt-name">
+						<label for="lastname">Last Name:</label>
+						<div>
+							<input
+								id="lastname"
+								placeholder="Last Name"
+								th:field="*{lastname}"
+								required
+								autofocus="autofocus"
+								style="padding-left: 6px"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="cnt-register">
+					<label for="email">Email Address:</label>
+					<div class="box-cnt">
+						<input
+							class="box-form"
+							id="email"
+							placeholder="Email Address"
+							th:field="*{email}"
+							required
+							autofocus="autofocus"
+							style="padding-left: 6px"
+						/>
+					</div>
+				</div>
+				<div class="cnt-register">
+					<label for="password">Password:</label>
+					<div class="box-cnt">
+						<input
+							type="password"
+							class="box-form"
+							id="password"
+							placeholder="Password"
+							th:field="*{password}"
+							required
+							autofocus="autofocus"
+							style="padding-left: 6px"
+						/>
+					</div>
+				</div>
+				<p class="txt-one">
+					By clicking "Sign up", you agree to our Terms, Privacy Policy and Cookies Policy. We may send you
+					SMS notifications, which you can turn off at any time.
+				</p>
+
+				<button type="submit" class="btn-success">Sign Up</button>
+				<span class="txt-login"
+					>Already registered? <a href="/" th:href="@{views/pages/login}">Login here</a></span
+				>
+			</div>
+		</form>
+	</body>
+</html>
