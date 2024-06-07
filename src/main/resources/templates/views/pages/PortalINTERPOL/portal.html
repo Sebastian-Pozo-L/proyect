@@ -6,21 +6,77 @@
 		<title>Portal INTERPOLcase</title>
 
 		<link rel="stylesheet" th:href="@{/css/portal.css}" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+		<script type="module" th:src="@{/js/interpol.js}"></script>
+		<script type="module" th:src="@{/js/content-portal.js}"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 	</head>
 	<body>
-		<div class="content-menu">
-			<div class="cnt-img-menu">
-				<a class="logontpl" th:href="@{/INTERPOLcase}"><img src="/images/INTERPOL-Logo.png" alt="awd" /></a>
+		<div class="main-container">
+			<div class="content-menu">
+				<div class="cnt-img-menu">
+					<a class="logontpl" th:href="@{/INTERPOLcase}"><img src="/images/INTERPOL-Logo.png" alt="awd" /></a>
+				</div>
+				<hr class="line-divide" />
+				<button class="cnt-tittle-menu" id="home">Home</button>
+				<hr class="line-divide" />
+				<button class="cnt-tittle-menu" id="casedetails">Case details</button>
+				<hr class="line-divide" />
+				<button class="cnt-tittle-menu" id="datalysis">Data analysis</button>
+				<hr class="line-divide" />
+				<button class="cnt-tittle-menu" id="announcements">Announcements</button>
+				<hr class="line-divide" />
+				<button class="cnt-tittle-menu" id="myaccount">My account</button>
+				<hr class="line-divide" />
 			</div>
-			<hr class="line-divide" />
-			<div class="cnt-tittle-menu"><a href="">Consulta de avisos</a></div>
-			<hr class="line-divide" />
-			<div class="cnt-tittle-menu"><a href="">Detalles de los casos</a></div>
-			<hr class="line-divide" />
-			<div class="cnt-tittle-menu"><a href="">Analisis de datos</a></div>
-			<hr class="line-divide" />
-			<div class="cnt-tittle-menu"><a href="">Mi cuenta</a></div>
-			<hr class="line-divide" />
+			<div class="container-box">
+				<div class="nav-user">
+					<div>
+						<a href=""><img src="" alt="" /></a><a href="">Announcements</a>
+					</div>
+					<hr />
+					<div>
+						<a href=""><img src="" alt="" /></a><a href="">Log out</a>
+					</div>
+					<hr />
+					<img src="" alt="" />
+					<div>
+						<p>{user}</p>
+						<p>Lorem, ipsum dolor.</p>
+					</div>
+				</div>
+				<div class="cnt-pag" id="cnt-pag">
+					<div class="box-present" id="box-present">
+						<div class="text-present-container" id="text-present-container">
+							<h2>Welcome {user}</h2>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est laudantium possimus aperiam,
+								optio labore alias repudiandae, consequuntur delectus dolorem illum reiciendis, omnis aliquid
+								voluptate dolor!
+							</p>
+						</div>
+						<hr />
+					</div>
+					<div class="box-opc" id="box-opc">
+						<div>
+							<a href=""><img src="/images/campana.png" alt="" /></a><a href="">Notice inquiry</a>
+						</div>
+						<hr />
+						<div>
+							<a href=""><img src="/images/campana.png" alt="" /></a><a href="">Case details</a>
+						</div>
+						<hr />
+						<div>
+							<a href=""><img src="/images/campana.png" alt="" /></a><a href="">Data analysis</a>
+						</div>
+						<hr />
+						<div>
+							<a href=""><img src="/images/campana.png" alt="" /></a><a href="">My account</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
+	<footer></footer>
 </html>

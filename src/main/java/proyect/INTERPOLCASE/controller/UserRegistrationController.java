@@ -33,6 +33,6 @@ public class UserRegistrationController {
     @PostMapping
     public String registerUserACcount(@ModelAttribute("user") RegisterUserDTO registerDTO) {
         userService.userSave(registerDTO);
-        return "redirect:/registration?succes";
+        return "redirect:/INTERPOLcase";
     }
 }

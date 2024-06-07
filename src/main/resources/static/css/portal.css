@@ -1,14 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@font-face {
+	font-family: "Keep Calm";
+	src: url("/fonts/KeepCalm-Medium.ttf") format("truetype");
+}
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+.main-container {
+	display: flex;
+	height: 100vh;
+}
+
+/*
+=============================
+    		HOME
+============================= 
+*/
+
+/* MENU */
 .content-menu {
 	width: 15%;
+	border-right: 2px solid #004480;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .logontpl img {
@@ -16,9 +36,8 @@
 }
 
 .line-divide {
-	height: 1.5px;
-	background-color: black;
-	border: none;
+	height: 2.5px;
+	background-color: #004480;
 }
 
 .cnt-img-menu {
@@ -33,10 +52,203 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border: none;
+	background-color: white;
+	color: #004480;
+	font: 500 12.2px "Keep Calm", sans-serif;
 }
 
-.cnt-tittle-menu a {
-	font: 500 14.2px "Poppins", sans-serif;
+/*---------------*/
+
+.container-box {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background-color: #e8e8e8;
+}
+
+/*NAV-USER*/
+
+.nav-user {
+	background-color: aquamarine;
+	width: 345px;
+	margin: 17px 0px 17px 0px;
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.nav-user hr {
+	width: 1.5px;
+	height: 40px;
+	background-color: #004480;
+	border: none;
+}
+
+.nav-user a {
+	font: 400 11.2px "Keep Calm", sans-serif;
 	text-decoration: none;
-	color: #004480;
+}
+
+.nav-user p {
+	font-size: 14px;
+}
+
+/*CONTENT-PAG*/
+
+.cnt-pag {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	width: 1100px;
+	margin: 0 auto;
+	padding: 0px 30px 30px 30px;
+}
+
+/*BOX-PRESENT*/
+
+.box-present {
+	display: flex;
+	border: 2px solid black;
+	background-color: white;
+}
+
+.text-present-container {
+	display: flex;
+	flex-direction: column;
+	width: 520px;
+	height: 250px;
+	padding: 20px 25px;
+	gap: 10px;
+	font-family: "Keep Calm", sans-serif;
+}
+
+.text-present-container h2 {
+	background-color: aqua;
+}
+
+.text-present-container p {
+	font-size: 12.5px;
+	font-weight: 100;
+}
+
+.box-present hr {
+	margin-top: 20px;
+	width: 1.5px;
+	height: 100px;
+	background-color: #004480;
+	border: none;
+}
+
+/*BOX-OPC*/
+
+.box-opc {
+	margin-top: 50px;
+	display: flex;
+	border: 2px solid #004480;
+	height: 110px;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: white;
+}
+
+.box-opc div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.box-opc a {
+	font: 600 12.2px "Keep Calm", sans-serif;
+	text-decoration: none;
+	color: black;
+}
+
+.box-opc hr {
+	height: 100%;
+	background-color: #004480;
+	width: 1.5px;
+	border: none;
+}
+
+/*
+=============================
+    	CASE DETAILS
+============================= 
+*/
+
+.datainf {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+	background-color: white;
+	height: 95%;
+	justify-content: center;
+}
+
+/* NAV-DATA */
+
+.nav-data {
+	display: flex;
+	height: 65px;
+	background-color: aqua;
+	width: 70%;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.inputname {
+	height: 30px;
+	width: 200px;
+	border-radius: 5px;
+	padding-left: 6px;
+}
+
+.inputname::placeholder {
+	padding-left: 6px;
+}
+
+.nationality {
+	height: 30px;
+	width: 160px;
+	border-radius: 5px;
+}
+
+.sex-id {
+	height: 30px;
+	width: 70px;
+	border-radius: 5px;
+}
+
+.calendar {
+	padding-left: 6px;
+	height: 30px;
+	width: 85px;
+	border-radius: 5px;
+}
+
+.calendar::placeholder {
+	padding-left: 6px;
+}
+.buttondata {
+	width: 60px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+/* CONTENT-DATA*/
+
+.content-data {
+	flex: 1;
+	margin: 0 auto;
+	background-color: chocolate;
+	width: 900px;
+	height: 50px;
+}
+
+.content-data img {
+	width: 50px;
 }
